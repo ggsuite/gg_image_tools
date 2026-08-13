@@ -8,6 +8,7 @@
 preserve
 - The cli tests do not share the same temporary output folder anymore
 - Cleanup copy right headers. Update to dart 3.13. Auto fixes.
+- Cleanup copy right headers. Update to dart 3.13. Auto fixes. Setup quick-check pipeline.
 
 ## 1.1.0 - 2024-07-27
 
