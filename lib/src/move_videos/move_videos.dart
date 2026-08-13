@@ -1,5 +1,5 @@
 // @license
-// Copyright (c) 2019 - 2024 Dr. Gabriel Gatzsche. All Rights Reserved.
+// Copyright (c) ggsuite
 //
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
@@ -11,10 +11,7 @@ import 'package:path/path.dart';
 /// MoveImagesWithWrongDate
 class MoveVideos {
   /// The file types that are processed
-  static const videoFileTypes = [
-    'mp4',
-    'mov',
-  ];
+  static const videoFileTypes = ['mp4', 'mov'];
 
   /// Constructor
   MoveVideos({
@@ -50,8 +47,9 @@ class MoveVideos {
     }
 
     // Iterate all videos
-    final videos =
-        input.listSync(recursive: true).whereType<File>().where((element) {
+    final videos = input.listSync(recursive: true).whereType<File>().where((
+      element,
+    ) {
       var ext = extension(element.path.toLowerCase());
       if (ext.isEmpty) {
         return false;
@@ -64,18 +62,14 @@ class MoveVideos {
     });
 
     for (final video in videos) {
-      await _processVideo(
-        video: video,
-      );
+      await _processVideo(video: video);
     }
 
     log('Done.');
   }
 
   // ...........................................................................
-  Future<void> _processVideo({
-    required File video,
-  }) async {
+  Future<void> _processVideo({required File video}) async {
     // Get the relative path of the video from input folder
     final relativeImagePath = video.path.substring(input.path.length + 1);
     final relativeFolderPath = dirname(relativeImagePath);

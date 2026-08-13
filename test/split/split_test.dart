@@ -1,5 +1,5 @@
 // @license
-// Copyright (c) 2019 - 2024 Dr. Gabriel Gatzsche. All Rights Reserved.
+// Copyright (c) ggsuite
 //
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
@@ -35,15 +35,10 @@ void main() {
     group('exec()', () {
       // .......................................................................
 
-      test(
-          'should move images and videos with creation dates that match not '
+      test('should move images and videos with creation dates that match not '
           'the folder date to a new parent folder', () async {
         createOutputFolder();
-        final split = Split(
-          input: input,
-          output: target,
-          log: (msg) {},
-        );
+        final split = Split(input: input, output: target, log: (msg) {});
         await split.exec();
 
         // The images have been moved to folders matching their creation date
