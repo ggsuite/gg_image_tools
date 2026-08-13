@@ -1,5 +1,5 @@
 // @license
-// Copyright (c) 2019 - 2024 Dr. Gabriel Gatzsche. All Rights Reserved.
+// Copyright (c) ggsuite
 //
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
@@ -65,10 +65,16 @@ void main() {
             });
 
             // Define video pathes
-            final originalVideoPath =
-                join(input.path, '2024-02-10 Images', 'flower.mov');
-            final targetVideoPath =
-                join(target.path, '2024-02-10 Images', 'flower.mov');
+            final originalVideoPath = join(
+              input.path,
+              '2024-02-10 Images',
+              'flower.mov',
+            );
+            final targetVideoPath = join(
+              target.path,
+              '2024-02-10 Images',
+              'flower.mov',
+            );
 
             // Is video yet in input folder
             expect(File(originalVideoPath).existsSync(), isTrue);

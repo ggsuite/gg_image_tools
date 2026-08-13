@@ -1,5 +1,5 @@
 // @license
-// Copyright (c) 2019 - 2024 Dr. Gabriel Gatzsche. All Rights Reserved.
+// Copyright (c) ggsuite
 //
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
@@ -23,11 +23,7 @@ class Split {
   ];
 
   /// Constructor
-  Split({
-    required this.input,
-    required this.output,
-    required this.log,
-  }) {
+  Split({required this.input, required this.output, required this.log}) {
     assert(input.existsSync());
     assert(input.absolute != output.absolute);
     if (output.existsSync()) {
@@ -50,8 +46,9 @@ class Split {
     output.createSync(recursive: true);
 
     // Iterate all images
-    final images =
-        input.listSync(recursive: true).whereType<File>().where((element) {
+    final images = input.listSync(recursive: true).whereType<File>().where((
+      element,
+    ) {
       var ext = extension(element.path.toLowerCase());
       if (ext.isEmpty) {
         return false;
@@ -64,9 +61,7 @@ class Split {
     });
 
     for (final image in images) {
-      await _processImage(
-        image: image,
-      );
+      await _processImage(image: image);
     }
 
     log('Done.');
@@ -141,9 +136,7 @@ class Split {
   }
 
   // ...........................................................................
-  Future<void> _processImage({
-    required File image,
-  }) async {
+  Future<void> _processImage({required File image}) async {
     final creationDate =
         await _exifCreationDate(image) ?? await _fileCreationDate(image);
 
