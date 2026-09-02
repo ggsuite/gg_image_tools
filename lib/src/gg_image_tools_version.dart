@@ -9,4 +9,4 @@
 // coverage:ignore-file
 
 /// The version of the `gg_image_tools` package.
-const String ggImageToolsVersion = '1.2.0';
+const String ggImageToolsVersion = '1.3.0';
