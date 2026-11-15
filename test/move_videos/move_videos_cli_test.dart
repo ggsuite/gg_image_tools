@@ -24,7 +24,7 @@ void main() {
     group('run()', () {
       test('should allow to execute the command from cli', () async {
         final m = <String>[];
-        capturePrint(
+        await capturePrint(
           ggLog: m.add,
           code: () async {
             // Create command runner
