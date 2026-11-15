@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.4.0 - 2026-11-15
+
+### Added
+
+- Add the blog post on the SDK migration
+
+### Changed
+
+- Migrate to the latest Dart and Flutter SDK
+
 ## 1.3.0 - 2026-09-02
 
 ### Changed

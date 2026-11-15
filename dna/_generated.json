@@ -5,9 +5,9 @@
       "name": "base",
       "package": "helix",
       "ecosystem": null,
-      "resolvedVersion": "1.3.0",
+      "resolvedVersion": "1.15.1",
       "via": null,
-      "hash": "0x705e486e88a93125"
+      "hash": "0x6883da335b415f9d"
     },
     {
       "name": "dna-readme",
@@ -139,10 +139,11 @@
     }
   ],
   "claude": {
-    "claudeMdInclude": null
+    "claudeMdInclude": null,
+    "claudeMdFromDna": false
   },
-  "baseVersion": "1.3.0",
-  "baseHash": "0x705e486e88a93125",
+  "baseVersion": "1.15.1",
+  "baseHash": "0x6883da335b415f9d",
   "instances": [
     {
       "path": ".claude/skills/blog/SKILL.md",
