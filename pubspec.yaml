@@ -24,4 +24,4 @@ dev_dependencies:
   gg_capture_print: ^1.2.0
   gg_console_colors: ^2.5.0
   dna_ggsuite: ^2.0.0
-  helix: 1.15.1
+  helix: ^1.15.2
