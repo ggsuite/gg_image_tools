@@ -2,13 +2,13 @@
 
 ## Unreleased
 
+### Added
+
+- Add the blog post on the SDK migration
+
 ### Changed
 
 - Migrate to the latest Dart and Flutter SDK
-
-Require Dart 3.14
-Upgrade dna_ggsuite to 2.0.0 and helix to 1.15.1, regenerate the DNA
-Await capturePrint in the tests
 
 ## 1.3.0 - 2026-09-02
 
